@@ -19,6 +19,10 @@ This is an app made using Streamlit. This app will help user to track their inve
             
   - Step 4: Execute the following code, streamlit run app0.py
   - Step 5: Enjoy and fix bugs if you find any.
+
+# Architecture
+![image](https://user-images.githubusercontent.com/48247827/169540859-424df890-214b-4e09-aa99-a75ca9ac5a8f.png)
+
 # Click to wathch Demo
 
 [![Watch the video](https://img.youtube.com/vi/cgE5kb6Xjys/maxresdefault.jpg)](https://youtu.be/cgE5kb6Xjys)
