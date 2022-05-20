@@ -21,7 +21,7 @@ This is an app made using Streamlit. This app will help user to track their inve
   - Step 5: Enjoy and fix bugs if you find any.
 
 # Architecture
-![image](https://user-images.githubusercontent.com/48247827/169540859-424df890-214b-4e09-aa99-a75ca9ac5a8f.png)
+![image](https://user-images.githubusercontent.com/48247827/169541073-80defc42-b9b8-4051-96fc-f3eb48a2dd04.png)
 
 # Click to wathch Demo
 
