@@ -28,5 +28,6 @@ This is an app made using Streamlit. This app will help user to track their inve
 [![Watch the video](https://img.youtube.com/vi/cgE5kb6Xjys/maxresdefault.jpg)](https://youtu.be/cgE5kb6Xjys)
 
 # Next Steps
-  - Add more analytics capabilities like Forecasting or recommended investment amount
+  - ~Add more analytics capabilities like Forecasting or recommended investment amount~
+  - Add inflation adjusted investment amount which will be recommended to the user
   - Add more visualizations maybe Altair
