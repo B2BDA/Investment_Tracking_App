@@ -6,6 +6,7 @@ from dotenv import dotenv_values
 import os
 import encrypt_decrypt as ed
 from datetime import datetime
+from forecast import forecast_investment_amount
 
 config = dotenv_values(".env")  
 
@@ -26,7 +27,7 @@ except Exception as e:
 
 st.title('Welcome Mr./Mrs. Biswas')
 
-options = st.sidebar.radio(label = "Select Options", options = ['Enter New Data','Show Data','Update Existing Data','Delete Exsiting Data','Analytics'],)
+options = st.sidebar.radio(label = "Select Options", options = ['Enter New Data','Show Data','Forecast Investment Amount','Update Existing Data','Delete Exsiting Data','Analytics'],)
 if options == 'Enter New Data':
     with st.form("my_form"):
         st.subheader("Enter Details")
@@ -103,7 +104,30 @@ elif options == "Show Data":
     except Exception as e:
         print(e)
         st.error("Data not availble. Contact Admin!!")
-       
+        
+elif options == "Forecast Investment Amount":
+        try:
+                with st.spinner("Retrieving Data from Database"):
+                    rows = etl_obj.show_value()
+
+                    
+                    data = pd.DataFrame(rows, columns = ['Account_Number','Primary_Account_Holder','Secondary_Account_Holder','Nominee','Deposited_Amount','Maturity_Amount','Interest_Gained','Rate_of_Interest','Date_of_Deposit','Date_of_Maturity','Month_till_Maturity','Year_till_Maturity','Account_Type','Bank_Name'] )
+                    data = data.applymap(lambda x: ed.decode(x))
+        except Exception as e:
+            print(e)
+            st.error("Data not availble. Contact Admin!!")
+        try:
+            with st.spinner("Forecasting Investment Amount"):
+                pass
+                
+                forecast_obj = forecast_investment_amount(data)
+                st.caption("Data showing recommended investement amount with possible investement dates")
+                st.dataframe(forecast_obj[0])
+                st.caption("Chart showing recommended investement amount with possible investement dates")
+                st.pyplot(forecast_obj[1])
+        except Exception as e:
+            print(e)
+                
 elif options == "Analytics":     
     try:
         with st.spinner("Retrieving Data from Database"):

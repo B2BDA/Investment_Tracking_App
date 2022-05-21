@@ -55,7 +55,6 @@ class ETL:
             print(e)
         finally:
             self.create_table()
-        print("I am here")  
         self.AccNo = kwargs.get("AccNo")
         self.PrAccHol = kwargs.get("PrAccHol")
         self.ScAccHol = kwargs.get("ScAccHol", None)
@@ -74,7 +73,7 @@ class ETL:
                                      self.Nom,self.DepAmt,self.MatAmt,self.IntGain,self.RoI,self.DoD,self.DoM,self.AccType,self.KnabName,self.DtM,self.YtM)
         query = f""" INSERT INTO knab_info (AccNo,PrAccHol,ScAccHol,Nom,DepAmt,MatAmt,IntGain,RoI,DoD,DoM,DtM,YtM,AccType,KnabName)\
                     VALUES ('{self.AccNo}','{self.PrAccHol}','{self.ScAccHol}','{self.Nom}','{self.DepAmt}','{self.MatAmt}','{self.IntGain}','{self.RoI}','{self.DoD}','{self.DoM}','{self.DtM}','{self.YtM}','{self.AccType}','{self.KnabName}')"""
-        print(query)
+        # print(query)
         cur.execute(query)
 
         conn.commit()
