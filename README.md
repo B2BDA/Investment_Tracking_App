@@ -1,5 +1,5 @@
 # Investment_Tracking_App
-This is an app made using Streamlit. This app will help user to track their investments in various Banks for various schemes. I created this for my parents as they have trouble remembering maturity dates. This app will help them.
+This is an app made using Streamlit. This app will help user to track their investments in various Banks for various schemes. I created this for my parents as they have trouble remembering maturity dates. This app will help them. Also I have added a forecasting service which will help them to choose the amount they want to invest. 
 # How to run this app?
   - Step 1: Open terminal and perform pip install -r requirements.txt
   - Step 2: Open a python shell and execute the following to generate an encryption key  
@@ -29,5 +29,6 @@ This is an app made using Streamlit. This app will help user to track their inve
 
 # Next Steps
   - ~Add more analytics capabilities like Forecasting or recommended investment amount~
-  - Add inflation adjusted investment amount which will be recommended to the user
-  - Add more visualizations maybe Altair
+  - Add inflation adjusted investment amount which will be recommended to the user.
+  - Improve on how the forecasted data is shown, more like rounding it to the nearest whole number.
+  - Add more visualizations maybe Altair.
