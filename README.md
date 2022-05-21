@@ -1,5 +1,6 @@
 # Investment_Tracking_App
 This is an app made using Streamlit. This app will help user to track their investments in various Banks for various schemes. I created this for my parents as they have trouble remembering maturity dates. This app will help them. Also I have added a forecasting service which will help them to choose the amount they want to invest. 
+Since I am using Windows, I have made the app into a batch script which run everytime I log on my system. The reason I have not deployed this is server is because I dont want to take any risk of the encryption key getting leaked on the internet and I do not trust the security system for the free hosting platforms. :)
 # How to run this app?
   - Step 1: Open terminal and perform pip install -r requirements.txt
   - Step 2: Open a python shell and execute the following to generate an encryption key  
